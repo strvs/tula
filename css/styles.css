@@ -30,10 +30,11 @@ h2 {margin:48px 0 24px 0; padding:0; font-weight:normal; font-size:24px; line-he
 h3 {margin:48px 0 24px 0; padding:0; font-weight:bold; font-size:20px; line-height:22px; color:#222223}
 p {margin:24px 0; padding:0}
 
-.btn {display:inline-block; vertical-align:top; margin:0; padding:6px 36px; overflow:visible; outline:none; text-decoration:none; background:#006BB3; color:#FFFFFF; border:1px solid #006BB3; border-radius:4px; font:normal 14px/20px Lato, sans-serif; letter-spacing:0; text-transform:none; text-align:center; position:relative; -webkit-appearance:none; cursor:pointer; box-sizing:border-box}
-.btn:hover {text-decoration:underline}
+.btn {display:inline-block; vertical-align:top; margin:0; padding:6px 36px; overflow:visible; outline:none; text-decoration:none; background:#006BB3; color:#FFFFFF; border:1px solid #006BB3; border-radius:4px; font:normal 14px/20px Lato, sans-serif; letter-spacing:0; text-transform:none; text-align:center; position:relative; -webkit-appearance:none; cursor:pointer; box-sizing:border-box; transition:background 0.2s}
+.btn:hover {text-decoration:none; background:#428BCA}
 
 .btn-border {border-color:#CCCCCC; color:#53565A; background:#F2F2F2}
+.btn-border:hover {background:#E6E6E6}
 
 form.loading {position:relative}
 form.loading::after {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:rgba(255, 255, 255, 0.3) url(../images/loading.svg) no-repeat center; z-index:1}
@@ -106,7 +107,8 @@ label.error {display:block; margin:10px 0 0 0; font-size:13px; line-height:14px;
 .header-top-menu ul li {float:left; margin:0 0 0 30px; padding:0}
 .header-top-menu ul li::before {display:none}
 .header-top-menu ul li:first-child {margin:0}
-.header-top-menu ul li a {display:block; color:#7C7C7C}
+.header-top-menu ul li a {display:block; color:#7C7C7C; text-decoration:none; transition:color 0.2s}
+.header-top-menu ul li a:hover {color:#000000}
 
 @media (max-width:1269px) {
     .header-top-menu ul li {display:none; margin:0}
@@ -134,7 +136,8 @@ label.error {display:block; margin:10px 0 0 0; font-size:13px; line-height:14px;
 .logo img {display:block; width:56px}
 .header-title {float:left; margin:19px 0 0 24px; width:615px; font-size:24px; line-height:26px; color:#222223}
 .header-middle-user {float:right; margin:20px 9px 0 0}
-.header-middle-user-auth {display:block; border:1px solid #CCCCCC; border-radius:4px; color:#333333; padding:6px 15px; font-size:14px; line-height:20px}
+.header-middle-user-auth {display:block; border:1px solid #CCCCCC; border-radius:4px; color:#333333; padding:6px 15px; font-size:14px; line-height:20px; transition:background 0.2s}
+.header-middle-user-auth:hover {text-decoration:none; background:#F2F2F2}
 .header-middle-right-link {float:right; clear:right; margin:16px 9px 0 0; line-height:0}
 
 @media (max-width:1269px) {
@@ -145,7 +148,7 @@ label.error {display:block; margin:10px 0 0 0; font-size:13px; line-height:14px;
     .header-middle-right-link {margin:36px 0 0 0; clear:left}
 }
 
-.nav {border-top:1px solid #EBEBEB}
+.nav {border-top:1px solid #EBEBEB; position:relative; z-index:20}
 .nav .container {height:50px}
 .nav-mobile-link {display:none}
 .nav-mobile-close {display:none}
@@ -155,8 +158,19 @@ label.error {display:block; margin:10px 0 0 0; font-size:13px; line-height:14px;
 .nav ul li:first-child {margin:0}
 .nav ul li::after {content:""; display:block; position:absolute; left:-15px; top:20px; width:1px; height:10px; background:#D8E1E2}
 .nav ul li:first-child::after {display:none}
-.nav ul li a {color:#222223; display:block; position:relative}
-.nav ul li.active a::after {content:""; display:block; position:absolute; left:-15px; bottom:0; right:-15px; height:4px; background:rgba(0, 107, 179, 0.8)}
+.nav ul li a {color:#222223; display:block; position:relative; text-decoration:none; transition:color 0.2s; position:relative}
+.nav ul li a::after {content:""; display:block; position:absolute; left:-15px; bottom:0; right:-15px; height:4px; background:rgba(0, 107, 179, 0.8); transform:scale(0, 1); transition:transform 0.2s}
+.nav ul li.active a::after,
+.nav ul li:hover a::after {transform:scale(1, 1)}
+.nav ul li ul {display:none; position:absolute; left:-15px; top:100%; min-width:calc(100% + 30px); white-space:nowrap; background:#FFFFFF; margin:0; padding:0; border:1px solid #D9E1E2; border-top:none; border-bottom:none; font-size:14px; line-height:20px; font-weight:normal}
+.nav ul li:hover ul {display:block}
+.nav ul li ul::before {content:""; display:block; position:absolute; top:0; left:50%; border:6px solid transparent; border-top:6px solid #006BB3; transform:translateX(-50%); z-index:20}
+.nav ul li ul li {float:none; margin:0}
+.nav ul li ul li:first-child {border-top:none}
+.nav ul li ul li::after {display:none}
+.nav ul li ul li a {border-bottom:1px solid #D9E1E2; transition:border-color 0.2s; padding:7px 10px}
+.nav ul li ul li a:hover {border-bottom-color:rgba(0, 107, 179, 0.8)}
+.nav ul li ul li a::after {display:none}
 
 @media (max-width:1269px) {
     .nav .container {height:auto}
@@ -171,6 +185,9 @@ label.error {display:block; margin:10px 0 0 0; font-size:13px; line-height:14px;
     .nav ul li {float:none; margin:0; border-top:1px solid #EBEBEB}
     .nav ul li::after {display:none}
     .nav ul li.active a::after {display:none}
+    .nav ul li ul {position:relative; left:auto; top:auto; min-width:auto; border:1px solid #D9E1E2; border-left:none; border-right:none}
+    .nav ul li ul::before {display:none}
+    .nav ul li ul li a {border:none}
 }
 
 .breadcrumbs {font-size:12px; line-height:20px; color:#A2AAAD}
@@ -318,7 +335,8 @@ label.error {display:block; margin:10px 0 0 0; font-size:13px; line-height:14px;
 .main-side-links-title {font-weight:bold; font-size:18px; line-height:20px; color:#222223}
 .main-side-links-list {margin:12px 0 0 0}
 .main-side-links-item {display:block !important; padding:6px 0}
-.main-side-links-item a {display:table; width:100%; color:#FFFFFF; background:rgba(0, 107, 179, 0.8)}
+.main-side-links-item a {display:table; width:100%; color:#FFFFFF; background:rgba(0, 107, 179, 0.8); text-decoration:none; transition:background 0.2s}
+.main-side-links-item a:hover {background:rgba(0, 107, 179, 1)}
 .main-side-links-item-logo {display:table-cell; vertical-align:middle; height:80px; padding:0 8px 0 14px}
 .main-side-links-item-logo img {display:block; max-width:60px}
 .main-side-links-item-title {display:table-cell; width:100%; vertical-align:middle; height:80px; font-weight:bold; font-size:13px; line-height:18px; padding:0 14px 0 0}
@@ -373,7 +391,8 @@ label.error {display:block; margin:10px 0 0 0; font-size:13px; line-height:14px;
 
 .pager {margin:30px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px; text-align:center}
 .pager span,
-.pager a {margin:0 5px; font-size:14px; line-height:20px; letter-spacing:0; font-weight:500; color:#A2AAAD}
+.pager a {margin:0 5px; font-size:14px; line-height:20px; letter-spacing:0; font-weight:500; color:#A2AAAD; text-decoration:none; transition:color 0.2s}
+.pager a:hover {color:#000000}
 
 .news-detail {padding:30px 0 60px 0; max-width:1014px; margin:0 auto}
 .news-detail h1 {margin:0}
@@ -519,13 +538,13 @@ label.error {display:block; margin:10px 0 0 0; font-size:13px; line-height:14px;
 
 .contacts-side {float:left; width:378px}
 .contacts-side-title {font-weight:500; font-size:25px; line-height:29px; color:#222223}
-.contacts-side-menu {margin:24px 0 0 0; font-size:14px; line-height:20px}
+.contacts-side-menu {margin:12px 0 0 0; font-size:14px; line-height:20px}
 .contacts-side-menu ul {margin:0; padding:0; list-style:none}
-.contacts-side-menu ul li {margin:12px 0 0 0; padding:0 0 12px 0; border-bottom:1px solid #D9E1E2; position:relative}
-.contacts-side-menu ul li:first-child {margin:0}
+.contacts-side-menu ul li {margin:0; padding:0; position:relative}
 .contacts-side-menu ul li::before {display:none}
-.contacts-side-menu ul li.active {border-bottom:2px solid #006BB3}
-.contacts-side-menu ul li a {color:#222223}
+.contacts-side-menu ul li a {color:#222223; display:block; padding:12px 0; border-bottom:1px solid #D9E1E2; text-decoration:none; transition:border-bottom-color 0.2s}
+.contacts-side-menu ul li a:hover {border-bottom-color:#006BB3}
+.contacts-side-menu ul li.active a {border-bottom:2px solid #006BB3}
 
 @media (max-width:1269px) {
     .contacts-side {float:none; width:auto}
@@ -561,7 +580,8 @@ label.error {display:block; margin:10px 0 0 0; font-size:13px; line-height:14px;
 }
 
 .footer {height:127px; position:relative; margin:-127px 0 0 0; color:#7C7C7C}
-.footer a {color:#7C7C7C}
+.footer a {color:#7C7C7C; text-decoration:none; transition:color 0.2s}
+.footer a:hover {color:#000000}
 .footer .container {background:none; padding:0}
 
 @media (max-width:1269px) {
