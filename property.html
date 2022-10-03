@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Специализированное государственное учреждение при Правительстве Тульской области «Фонд имущества Тульской области»</title>
+
+        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/select2/select2.css" />
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header class="header">
+                    <div class="header-top">
+                        <div class="container">
+                            <div class="header-top-menu">
+                                <ul>
+                                    <li><a href="#">Версия для слабовидящих</a></li>
+                                    <li class="on-mobile"><a href="#">Карта сайта</a></li>
+                                    <li><a href="#">Портал Правительства Тульской области</a></li>
+                                </ul>
+                            </div>
+                            <div class="header-top-search">
+                                <form action="#" method="post">
+                                    <div class="header-top-search-submit"><button type="submit"><svg><use xlink:href="images/sprite.svg#header-top-search"></use></svg></button></div>
+                                    <div class="header-top-search-input"><input type="text" name="search" value="" placeholder="Поиск" /></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-middle">
+                        <div class="container">
+                            <div class="logo"><a href="#"><img src="images/logo.svg" alt="" /></a></div>
+                            <div class="header-title">Специализированное государственное учреждение при&nbsp;Правительстве Тульской области «Фонд имущества Тульской области»</div>
+                            <div class="header-middle-user">
+                                <a href="windows/auth.html" class="header-middle-user-auth window-link">Войти в личный кабинет</a>
+                            </div>
+                            <div class="header-middle-right-link"><a href="#"><img src="images/header-middle-right-link.svg" alt="" /></a></div>
+                        </div>
+                    </div>
+
+                    <div class="nav">
+                        <div class="container">
+                            <a href="#" class="nav-mobile-link"><svg><use xlink:href="images/sprite.svg#nav-mobile-link"></use></svg></a>
+                            <a href="#" class="nav-mobile-close"><svg><use xlink:href="images/sprite.svg#window-close"></use></svg></a>
+                            <ul>
+                                <li><a href="#">О фонде</a></li>
+                                <li><a href="#">Документы</a></li>
+                                <li class="active"><a href="#">Продажа/аренда имущества</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">Антикоррупция</a></li>
+                                <li><a href="#">Электронная приемная</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="breadcrumbs">
+                    <div class="container">
+                        <a href="#">Главная</a><span>Продажа/аренда государственного имущества</span>
+                    </div>
+                </div>
+
+                <!-- container -->
+                <div class="container">
+
+                    <!-- cabinet -->
+                    <div class="cabinet">
+
+                        <h1>Продажа/аренда государственного имущества</h1>
+
+                        <!-- cabinet side -->
+                        <div class="cabinet-side">
+
+                            <div class="filter-mobile-link"><a href="#" class="btn btn-border"><span>Показать фильтры</span><span>Скрыть фильтры</span></a></div>
+                            <!-- filters -->
+                            <div class="filters">
+                                <form action="#" method="post">
+                                    <div class="filters-group">
+                                        <div class="filters-group-title">Вид имущества</div>
+                                        <div class="filters-group-list">
+                                            <div class="filters-group-item"><div class="form-radio"><label><input type="radio" name="type" value="1" checked="checked" /><span>Имущественные комплексы</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-radio"><label><input type="radio" name="type" value="2" /><span>Недвижимость</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-radio"><label><input type="radio" name="type" value="3" /><span>Земельные участки</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-radio"><label><input type="radio" name="type" value="4" /><span>Транспортные средства</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-radio"><label><input type="radio" name="type" value="5" /><span>Акции и иное имущество</span></label></div></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="filters-group on-mobile">
+                                        <div class="filters-group-title">Кадастровый номер</div>
+                                        <div class="filters-group-list">
+                                            <div class="form-input"><input type="text" name="search" value="" placeholder="71 : XX : XXXXX" class="searchID" /></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="filters-group">
+                                        <div class="filters-group-title">Вид разрешённого использования</div>
+                                        <div class="filters-group-list">
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="allow[1]" checked="checked" /><span>ИЖС/ЛПХ</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="allow[2]" /><span>Коммерческое или промышленное назначение</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="allow[3]" /><span>Сельско-хозяйственное назначение</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="allow[4]" /><span>Садоводство и огородничество</span></label></div></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="filters-group">
+                                        <div class="filters-group-title">Район поиска</div>
+                                        <div class="filters-group-list">
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[00]" /><span>Все</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[01]" /><span>Алексинский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[02]" /><span>Арсеньевский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[03]" /><span>Белевский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[04]" /><span>Богородицкий район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[05]" /><span>Веневский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[06]" /><span>Воловский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[07]" /><span>Дубенский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[08]" /><span>Ефремовский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[09]" /><span>Заокский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[10]" /><span>Ленинский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[11]" /><span>Новомосковский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[12]" /><span>Одоевский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[13]" /><span>Плавский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[14]" /><span>Суворовский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[15]" /><span>Тепло-Огаревский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[16]" /><span>Узловский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[17]" /><span>Чернский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[18]" /><span>Щекинский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[19]" /><span>Ясногорский район</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[20]" /><span>г. Донской</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[21]" /><span>г. Тула (Центральный)</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[22]" /><span>г. Тула (Пролетарский)</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[23]" /><span>г. Тула (Зареченский)</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[24]" /><span>г. Тула (Привокзальный)</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[25]" /><span>г. Тула (Советский)</span></label></div></div>
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="department[26]" /><span>Муниципальное образование г. Тула</span></label></div></div>
+                                        </div>
+                                        <div class="filters-group-list-more"><a href="#"><span>Показать все районы</span><span>Скрыть список</span></a></div>
+                                    </div>
+
+                                    <div class="filters-group">
+                                        <div class="filters-group-list">
+                                            <div class="filters-group-item"><div class="form-checkbox"><label><input type="checkbox" name="closed" checked="checked" /><span>Показать завершенные торги</span></label></div></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="filters-submit"><button type="submit" class="btn btn-border">Применить фильтры</button></div>
+                                </form>
+                            </div>
+                            <!-- filters END -->
+                        </div>
+                        <!-- cabinet side END -->
+
+                        <!-- cabinet container -->
+                        <div class="cabinet-container">
+                            <div class="registration">
+                                <div class="registration-title">Желаете получать уведомления о новых аукционах?</div>
+                                <div class="registration-container">
+                                    <div class="registration-text">Зарегистрируйтесь в личном кабинете, выберите интересующие вас параметры аукциона и&nbsp;получайте уведомления в удобном для вас формате</div>
+                                    <div class="registration-btn"><a href="windows/auth.html" class="btn window-link">Регистрация</a></div>
+                                </div>
+                            </div>
+
+                            <div class="search-id">
+                                <form action="#" method="post">
+                                    <div class="search-id-title">Знаете кадастровый номер? Введите в поле для поиска</div>
+                                    <div class="form-input"><input type="text" name="search" value="" placeholder="71 : XX : XXXXX" class="searchID" /></div>
+                                </form>
+                            </div>
+
+                            <div class="search-count">Найдено: 5</div>
+
+                            <div class="search-results">
+                                <div class="search-results-item">
+                                    <div class="search-results-item-content">
+                                        <div class="search-results-item-header"><span>Опубликовано: 02.09.2022, 17:08 &nbsp;</span> <a href="#">Недвижимость</a> &nbsp;|&nbsp; <a href="#">Аренда</a></div>
+                                        <div class="search-results-item-title">04.10.2022 11-00 аукцион в электронной форме посредством публичного предложения по продаже имущественного комплекса (Тульская область, Алексинский район, г. Алексин, ул. З. Космодемьянской, д. 8)</div>
+                                        <div class="search-results-item-anonce">Лот № 1: находящийся в государственной собственности Тульской области объект недвижимого имущества (далее – Имущество): Нежилое помещение, назначение: Нежилое помещение, площадь: 309.2, номер, тип этажа, на котором расположено помещение, машино-место: Этаж № 1, кадастровый номер: 71:24:050303:1707, адрес: Тульская область, р-н Алексинский, г Алексин, ул Вересаева, д 2.</div>
+                                    </div>
+                                    <div class="search-results-item-side">
+                                        <div class="search-results-item-side-download"><a href="#" class="btn btn-border">Скачать</a></div>
+                                        <div class="search-results-item-side-info">Тип файла: .doc<br /> Размер: 1.25 МБ</div>
+                                    </div>
+                                </div>
+
+                                <div class="search-results-item">
+                                    <div class="search-results-item-content">
+                                        <div class="search-results-item-header"><span>Опубликовано: 02.09.2022, 17:08 &nbsp;</span> <a href="#">Недвижимость</a> &nbsp;|&nbsp; <a href="#">Аренда</a></div>
+                                        <div class="search-results-item-title">04.10.2022 11-00 аукцион в электронной форме посредством публичного предложения по продаже имущественного комплекса (Тульская область, Алексинский район, г. Алексин, ул. З. Космодемьянской, д. 8)</div>
+                                        <div class="search-results-item-anonce">Лот № 1: находящийся в государственной собственности Тульской области объект недвижимого имущества (далее – Имущество): Нежилое помещение, назначение: Нежилое помещение, площадь: 309.2, номер, тип этажа, на котором расположено помещение, машино-место: Этаж № 1, кадастровый номер: 71:24:050303:1707, адрес: Тульская область, р-н Алексинский, г Алексин, ул Вересаева, д 2.</div>
+                                    </div>
+                                    <div class="search-results-item-side">
+                                        <div class="search-results-item-side-download"><a href="#" class="btn btn-border">Скачать</a></div>
+                                        <div class="search-results-item-side-info">Тип файла: .doc<br /> Размер: 1.25 МБ</div>
+                                    </div>
+                                </div>
+
+                                <div class="search-results-item">
+                                    <div class="search-results-item-content">
+                                        <div class="search-results-item-header"><span>Опубликовано: 02.09.2022, 17:08 &nbsp;</span> <a href="#">Недвижимость</a> &nbsp;|&nbsp; <a href="#">Продажа</a></div>
+                                        <div class="search-results-item-title">04.10.2022 11-00 аукцион в электронной форме посредством публичного предложения по продаже имущественного комплекса (Тульская область, Алексинский район, г. Алексин, ул. З. Космодемьянской, д. 8)</div>
+                                        <div class="search-results-item-anonce">Лот № 1: находящийся в государственной собственности Тульской области объект недвижимого имущества (далее – Имущество): Нежилое помещение, назначение: Нежилое помещение, площадь: 309.2, номер, тип этажа, на котором расположено помещение, машино-место: Этаж № 1, кадастровый номер: 71:24:050303:1707, адрес: Тульская область, р-н Алексинский, г Алексин, ул Вересаева, д 2.</div>
+                                    </div>
+                                    <div class="search-results-item-side">
+                                        <div class="search-results-item-side-download"><a href="#" class="btn btn-border">Скачать</a></div>
+                                        <div class="search-results-item-side-info">Тип файла: .doc<br /> Размер: 1.29 МБ</div>
+                                    </div>
+                                </div>
+
+                                <div class="search-results-item">
+                                    <div class="search-results-item-content">
+                                        <div class="search-results-item-header"><span>Опубликовано: 02.09.2022, 17:08 &nbsp;</span> <a href="#">Недвижимость</a> &nbsp;|&nbsp; <a href="#">Продажа</a></div>
+                                        <div class="search-results-item-title">04.10.2022 11-00 аукцион в электронной форме посредством публичного предложения по продаже имущественного комплекса (Тульская область, Алексинский район, г. Алексин, ул. З. Космодемьянской, д. 8)</div>
+                                        <div class="search-results-item-anonce">Лот № 1: находящийся в государственной собственности Тульской области объект недвижимого имущества (далее – Имущество): Нежилое помещение, назначение: Нежилое помещение, площадь: 309.2, номер, тип этажа, на котором расположено помещение, машино-место: Этаж № 1, кадастровый номер: 71:24:050303:1707, адрес: Тульская область, р-н Алексинский, г Алексин, ул Вересаева, д 2.</div>
+                                    </div>
+                                    <div class="search-results-item-side">
+                                        <div class="search-results-item-side-download"><a href="#" class="btn btn-border">Скачать</a></div>
+                                        <div class="search-results-item-side-info">Тип файла: .doc<br /> Размер: 1.63 МБ</div>
+                                    </div>
+                                </div>
+
+                                <div class="search-results-item">
+                                    <div class="search-results-item-content">
+                                        <div class="search-results-item-header"><span>Опубликовано: 02.09.2022, 17:08 &nbsp;</span> <a href="#">Недвижимость</a> &nbsp;|&nbsp; <a href="#">Продажа</a></div>
+                                        <div class="search-results-item-title">04.10.2022 11-00 аукцион в электронной форме посредством публичного предложения по продаже имущественного комплекса (Тульская область, Алексинский район, г. Алексин, ул. З. Космодемьянской, д. 8)</div>
+                                        <div class="search-results-item-anonce">Лот № 1: находящийся в государственной собственности Тульской области объект недвижимого имущества (далее – Имущество): Нежилое помещение, назначение: Нежилое помещение, площадь: 309.2, номер, тип этажа, на котором расположено помещение, машино-место: Этаж № 1, кадастровый номер: 71:24:050303:1707, адрес: Тульская область, р-н Алексинский, г Алексин, ул Вересаева, д 2.</div>
+                                    </div>
+                                    <div class="search-results-item-side">
+                                        <div class="search-results-item-side-download"><a href="#" class="btn btn-border">Скачать</a></div>
+                                        <div class="search-results-item-side-info">Тип файла: .doc<br /> Размер: 1.63 МБ</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- cabinet container END -->
+
+                    </div>
+                    <!-- cabinet END -->
+
+                </div>
+                <!-- container END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer class="footer">
+            <div class="container">
+
+                <div class="footer-left">
+                    <div class="footer-contacts">
+                        <div class="footer-contacts-item">
+                            <div class="footer-contacts-item-title">E-mail</div>
+                            <div class="footer-contacts-item-text">
+                                <a href="mailto:fito@tularegion.ru">fito@tularegion.ru</a>
+                            </div>
+                        </div>
+                        <div class="footer-contacts-item">
+                            <div class="footer-contacts-item-title">Контактный телефон</div>
+                            <div class="footer-contacts-item-text">
+                                <a href="tel:+74872361342">(4872) 36-13-42</a>
+                                <a href="tel:+74872362232">(4872) 36-22-32</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">О фонде</a></li>
+                            <li><a href="#">Документы</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Антикоррупция</a></li>
+                            <li><a href="#">Электронная приемная</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <div class="footer-logos">
+                        <div class="footer-logo"><a href="#" target="_blank"><img src="images/footer-cit.png" alt="" /></a></div>
+                        <div class="footer-logo"><a href="#" target="_blank"><img src="files/footer-counter.png" alt="" /></a></div>
+                    </div>
+                    <div class="footer-copyrights">© Фонд имущества Тульской области 2022г.</div>
+                </div>
+
+            </div>
+        </footer>
+
+        <script>
+            var pathTemplate = './';
+        </script>
+
+        <script src="js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/select2/ru.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>
