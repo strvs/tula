@@ -7,6 +7,17 @@ $(document).ready(function() {
         'Неправильно введен Телефон'
     );
 
+    $('body').on('change', '.form-file input', function() {
+        var curInput = $(this);
+        var curField = curInput.parents().filter('.form-file');
+        var curName = curInput.val().replace(/.*(\/|\\)/, '');
+        if (curName != '') {
+            curField.find('.form-file-input span').html(curName);
+        } else {
+            curField.find('.form-file-input span').html(curField.find('.form-file-input span').attr('data-placeholder'));
+        }
+    });
+
     $('form').each(function() {
         initForm($(this));
     });
@@ -146,9 +157,40 @@ $(document).ready(function() {
         $('.news-filter').toggleClass('open');
         e.preventDefault();
     });
-    
+
     $('#news-filter-year').change(function() {
         $('#news-filter-month').prop('disabled', false);
+    });
+
+    $('.feedback-window').trigger('click');
+
+    $('body').on('click', '#feedback-confirm-btn', function(e) {
+        isFeedbackConfirm = true;
+        windowClose();
+        e.preventDefault();
+    });
+
+    $('body').on('click', '#feedback-cancel-btn', function(e) {
+        window.history.go(-1);
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.form-input-clear', function(e) {
+        $(this).parent().find('.form-input input').val('');
+        $(this).removeClass('visible');
+        e.preventDefault();
+    });
+
+    $('body').on('change', '.form-input input', function(e) {
+        if ($(this).val() != '') {
+            $(this).parent().parent().find('.form-input-clear').addClass('visible');
+        }
+    });
+
+    $('.form-input input').each(function(e) {
+        if ($(this).val() != '') {
+            $(this).parent().parent().find('.form-input-clear').addClass('visible');
+        }
     });
 
 });
@@ -171,6 +213,8 @@ function initForm(curForm) {
         ignore: ''
     });
 }
+
+var isFeedbackConfirm = true;
 
 function windowOpen(linkWindow, dataWindow) {
     if ($('.window').length == 0) {
@@ -213,11 +257,15 @@ function windowOpen(linkWindow, dataWindow) {
             initForm($(this));
         });
 
+        if ($('.window .window-feedback').length == 1) {
+            isFeedbackConfirm = false;
+        }
+
     });
 }
 
 function windowClose() {
-    if ($('.window').length > 0) {
+    if ($('.window').length > 0 && isFeedbackConfirm) {
         $('.window').remove();
         $('html').removeClass('window-open');
         $('body').css({'margin-right': 0});
