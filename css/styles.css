@@ -29,6 +29,24 @@ h1:first-child {margin-top:0}
 h2 {margin:48px 0 24px 0; padding:0; font-weight:normal; font-size:24px; line-height:26px; color:#222223}
 h3 {margin:48px 0 24px 0; padding:0; font-weight:bold; font-size:20px; line-height:22px; color:#222223}
 p {margin:24px 0; padding:0}
+ul {margin:24px 0; padding:0 0 0 24px}
+li ul {margin:0}
+p+ul {margin-top:-12px}
+ol {margin:24px 0; padding:0 0 0 24px}
+li ol {margin:0}
+p+ol {margin-top:-12px}
+li {margin:0; padding:0}
+
+.table-scroll {margin:32px 0; position:relative; overflow:auto}
+.wrapper table {margin:32px 0; width:100%; border:1px solid #D9E1E2; border-collapse:collapse; font-size:16px; line-height:24px}
+.wrapper .table-scroll table {margin:0}
+.wrapper th {background:#F0F4F6; border:1px solid #D9E1E2; font-weight:500; font-size:18px; line-height:23px; vertical-align:middle; padding:20px 36px; text-align:left}
+.wrapper td {border:1px solid #D9E1E2; vertical-align:middle; padding:20px 36px}
+
+@media (max-width:1269px) {
+    .wrapper th {padding:10px 20px}
+    .wrapper td {padding:10px 20px}
+}
 
 .btn {display:inline-block; vertical-align:top; margin:0; padding:6px 36px; overflow:visible; outline:none; text-decoration:none; background:#006BB3; color:#FFFFFF; border:1px solid #006BB3; border-radius:4px; font:normal 14px/20px Lato, sans-serif; letter-spacing:0; text-transform:none; text-align:center; position:relative; -webkit-appearance:none; cursor:pointer; box-sizing:border-box; transition:background 0.2s}
 .btn:hover {text-decoration:none; background:#428BCA}
@@ -488,7 +506,9 @@ label.error {display:block; margin:10px 0 0 0; font-size:13px; line-height:14px;
 .search-id form {margin:0; padding:0}
 .search-id form::after {content:""; display:block; clear:both}
 .search-id-title {float:left; width:calc(100% - 365px); padding:8px 0; font-size:17px; line-height:20px; color:#222223}
-.search-id .form-input {float:right; width:355px}
+.search-id .form-submit {float:right; width:115px; margin:0 0 0 24px}
+.search-id .form-submit .btn {width:100%; padding-left:0; padding-right:0}
+.search-id .form-input {float:right; width:216px}
 
 @media (max-width:1269px) {
     .search-id {display:none}
@@ -804,3 +824,31 @@ label.error {display:block; margin:10px 0 0 0; font-size:13px; line-height:14px;
     .search-page-count {margin:32px 0 0 0}
     .search-page-result-header span {display:block}
 }
+
+.gallery {margin:18px 70px 68px 70px; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden; border:1px solid #D9E1E2; text-align:center}
+.gallery.slick-initialized {overflow:visible}
+.gallery-item {display:inline-block; vertical-align:top; width:100%; text-align:center}
+.gallery-item img {display:block; margin:0 auto}
+.gallery .slick-prev,
+.gallery .slick-next {display:block; position:absolute; z-index:2; top:50%; width:40px; height:40px; border:1px solid #D9E1E2; border-radius:4px; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:#F0F4F6; transition:background 0.2s, border-color 0.2s}
+.gallery .slick-prev {left:-65px}
+.gallery .slick-next {right:-65px}
+.gallery .slick-prev:hover,
+.gallery .slick-next:hover {border-color:#333333; background:#333333}
+.gallery .slick-prev svg,
+.gallery .slick-next svg {display:block; width:24px; height:24px; position:absolute; left:50%; top:50%; margin:-12px 0 0 -12px; fill:none; stroke:#333333; transition:stroke 0.2s}
+.gallery .slick-prev:hover svg,
+.gallery .slick-next:hover svg {stroke:#FFFFFF}
+.gallery .slick-dots {position:absolute; bottom:-37px; left:0; right:0; margin:0; padding:0; list-style:none; text-align:center; font-size:0; line-height:0; letter-spacing:-1px}
+.gallery .slick-dots li {margin:0 0 0 10px; padding:0; display:inline-block; vertical-align:top; position:relative}
+.gallery .slick-dots li::before {display:none}
+.gallery .slick-dots li:first-child {margin:0}
+.gallery .slick-dots li button {display:block; position:relative; width:10px; height:10px; border-radius:50%; border:none; background:#D9E1E2; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px; transition:background 0.2s}
+.gallery .slick-dots li button:hover,
+.gallery .slick-dots li.slick-active button {background:#428BCA}
+
+@media (max-width:1269px) {
+    .gallery {margin:18px 0 68px 0}
+}
+
+.file-info {color:#A2AAAD}

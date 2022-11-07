@@ -35,4 +35,12 @@
         <path d="M0.048584 0L6.99997 14.5L13.9514 0H0.048584Z" />
     </symbol>
 
+    <symbol viewBox="0 0 24 25" id="gallery-prev">
+        <path d="M14.4722 6.625L8.34723 12.75L14.4722 18.875" stroke-width="2" />
+    </symbol>
+
+    <symbol viewBox="0 0 24 25" id="gallery-next">
+        <path d="M9.52777 18.375L15.6528 12.25L9.52777 6.125" stroke-width="2" />
+    </symbol>
+
 </svg>
