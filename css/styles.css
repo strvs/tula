@@ -852,3 +852,8 @@ label.error {display:block; margin:10px 0 0 0; font-size:13px; line-height:14px;
 }
 
 .file-info {color:#A2AAAD}
+
+.page-404 {text-align:center; padding-top:calc(50vh - 320px); min-height:calc(100vh - 421px)}
+.page-404-title {font-size:96px; line-height:115px; color:#EBEBEB}
+.page-404 h1 {margin:24px 0 0 0}
+.page-404-text {margin:16px 0 0 0; font-size:14px; line-height:32px; color:#222223}

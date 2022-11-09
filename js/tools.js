@@ -221,7 +221,13 @@ $(document).ready(function() {
 function initForm(curForm) {
     curForm.find('input.phoneRU').mask('+70000000000');
 
-    curForm.find('input.searchID').mask('71 : 00 : 00000');
+    curForm.find('input.searchID').mask('71 : 00 : 000000Z : 0ZZZZZ', {
+        translation: {
+            'Z': {
+                pattern: /[0-9]/, optional: true
+            }
+        }
+    });
 
     curForm.find('.form-select select').each(function() {
         var curSelect = $(this);
